@@ -1,160 +1,394 @@
-<!doctype html>
-<html class="no-js" lang="">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FYP Project</title>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Online Shopping cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--Less styles -->
+   <!-- Other Less css file //different less files has different color scheam
+	<link rel="stylesheet/less" type="text/css" href="themes/less/simplex.less">
+	<link rel="stylesheet/less" type="text/css" href="themes/less/classified.less">
+	<link rel="stylesheet/less" type="text/css" href="themes/less/amelia.less">  MOVE DOWN TO activate
+	-->
+	<!--<link rel="stylesheet/less" type="text/css" href="themes/less/bootshop.less">
+	<script src="themes/js/less.js" type="text/javascript"></script> -->
+	
+<!-- Bootstrap style --> 
+    <link id="callCss" rel="stylesheet" href="themes/bootshop/bootstrap.min.css" media="screen"/>
+    <link href="themes/css/base.css" rel="stylesheet" media="screen"/>
+<!-- Bootstrap style responsive -->	
+	<link href="themes/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+	<link href="themes/css/font-awesome.css" rel="stylesheet" type="text/css">
+<!-- Google-code-prettify -->	
+	<link href="themes/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+<!-- fav and touch icons -->
+    <link rel="shortcut icon" href="themes/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="themes/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="themes/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="themes/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="themes/images/ico/apple-touch-icon-57-precomposed.png">
+	<style type="text/css" id="enject"></style>
+  </head>
+<body>
+<div id="header">
+<div class="container">
+<div id="welcomeLine" class="row">
+	<div class="span6">Welcome!</div>
+	<div class="span6">
+	<div class="pull-right">
+		<a href="product_summary.html"><span class="btn btn-mini btn-primary"><i class="icon-shopping-cart icon-white"></i> Shopping Cart </span> </a> 
+	</div>
+	</div>
+</div>
+<!-- Navbar ================================================== -->
+<div id="logoArea" class="navbar">
+<a id="smallScreen" data-target="#topMenu" data-toggle="collapse" class="btn btn-navbar">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</a>
+  <div class="navbar-inner">
+	<a class="brand" href="index.html"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
+	<!--
+		<form class="form-inline navbar-search" method="post" action="products.html" >
+		<input id="srchFld" class="srchTxt" type="text" />
+		  <select class="srchTxt">
+			<option>All</option>
+			<option>CLOTHES </option>
+			<option>FOOD AND BEVERAGES </option>
+			<option>HEALTH & BEAUTY </option>
+			<option>SPORTS & LEISURE </option>
+			<option>BOOKS & ENTERTAINMENTS </option>
+		</select> 
+		  <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
+    </form>
+	-->
+    <ul id="topMenu" class="nav pull-right">
+	<li class=""><a href="product_details.html">Specials Offer</a></li>
+	 <li class=""><a href="ride.html">Delivery</a></li>
+	 <li class=""><a href="contact.html">Contact</a></li>
+	 <li class=""><a href="signin.html" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
+	</li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+<!-- Header End====================================================================== -->
+<div id="carouselBlk">
+	<div id="myCarousel" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="item active">
+				<div class="container">
+					<img style="width:100%" src="themes/images/carousel/2.png" /></a>
+				</div>
+			</div>
+		  
+			<div class="item">
+				<div class="container">
+				<img src="themes/images/carousel/3.png" /></a>
+		
+				</div>
+			</div>
+			<div class="item">
+				<div class="container">
+					<img src="themes/images/carousel/4.png" /></a>		   
+				</div>
+			</div>
+			<div class="item">
+				<div class="container">
+					<img src="themes/images/carousel/5.png" /></a>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	  </div> 
+</div>
+<div id="mainBody">
+	<div class="container">
+	<div class="row">
+<!-- Sidebar ================================================== -->
+	<div id="sidebar" class="span3">
+		<div class="well well-small"><a id="myCart" href="product_summary.html"><img src="themes/images/ico-cart.png" alt="cart">3 Items in your cart  <span class="badge badge-warning pull-right">$155.00</span></a></div>
+		<ul id="sideManu" class="nav nav-tabs nav-stacked">
+			<li class="subMenu open"><a> ELECTRONICS [230]</a>
+				<ul>
+				<li><a class="active" href="products.html"><i class="icon-chevron-right"></i>Cameras (100) </a></li>
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Computers, Tablets & laptop (30)</a></li>
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Mobile Phone (80)</a></li>
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Sound & Vision (15)</a></li>
+				</ul>
+			</li>
+			<li class="subMenu"><a> CLOTHES [840] </a>
+			<ul style="display:none">
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Women's Clothing (45)</a></li>
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Women's Shoes (8)</a></li>												
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Women's Hand Bags (5)</a></li>	
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Men's Clothings  (45)</a></li>
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Men's Shoes (6)</a></li>												
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Kids Clothing (5)</a></li>												
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Kids Shoes (3)</a></li>												
+			</ul>
+			</li>
+			<li class="subMenu"><a>FOOD AND BEVERAGES [1000]</a>
+				<ul style="display:none">
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Angoves  (35)</a></li>
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Bouchard Aine & Fils (8)</a></li>												
+				<li><a href="products.html"><i class="icon-chevron-right"></i>French Rabbit (5)</a></li>	
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Louis Bernard  (45)</a></li>
+				<li><a href="products.html"><i class="icon-chevron-right"></i>BIB Wine (Bag in Box) (8)</a></li>												
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Other Liquors & Wine (5)</a></li>												
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Garden (3)</a></li>												
+				<li><a href="products.html"><i class="icon-chevron-right"></i>Khao Shong (11)</a></li>												
+			</ul>
+			</li>
+			<li><a href="products.html">HEALTH & BEAUTY [18]</a></li>
+			<li><a href="products.html">SPORTS & LEISURE [58]</a></li>
+			<li><a href="products.html">BOOKS & ENTERTAINMENTS [14]</a></li>
+		</ul>
+		<br/>
+			<div class="thumbnail">
+				<img src="themes/images/payment_methods.png" title="Bootshop Payment Methods" alt="Payments Methods">
+				<div class="caption">
+				  <h5>Payment Methods</h5>
+				</div>
+			  </div>
+	</div>
+<!-- Sidebar end=============================================== -->
+		<div class="span9">		
+			<div class="well well-small">
+			<h4>Featured Products <small class="pull-right">200+ featured products</small></h4>
+			<div class="row-fluid">
+			<div id="featured" class="carousel slide">
+			<div class="carousel-inner">
+			  <div class="item active">
+			  <ul class="thumbnails">
+				<li class="span3">
+				  <div class="thumbnail">
+				  <i class="tag"></i>
+					<a><img src="themes/images/products/b1.jpg" alt=""></a>
+					<div class="caption">
+					  <h5>Mobile Case</h5>
+					  <h4><a class="btn" data-name="Mobile Case" data-price="60" >BUY</a> <span class="pull-right">$10.00</span></h4>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+				  <i class="tag"></i>
+					<a><img src="themes/images/products/b2.jpg" alt=""></a>
+					<div class="caption">
+					  <h5>Charger</h5>
+					  <h4><a class="btn" data-name="Charger" data-price="50" >BUY</a> <span class="pull-right">$50.00</span></h4>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+				  <i class="tag"></i>
+					<a><img src="themes/images/products/b3.jpg" alt=""></a>
+					<div class="caption">
+					  <h5>Cyber Power Charger</h5>
+					   <h4><a class="btn" data-name="Cyber Power Charger" data-price="80">BUY</a> <span class="pull-right">$80.00</span></h4>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+				  <i class="tag"></i>
+					<a><img src="themes/images/products/b4.jpg" alt=""></a>
+					<div class="caption">
+					  <h5>Power Bank</h5>
+					   <h4><a class="btn" data-name="Power Bank" data-price="60">BUY</a> <span class="pull-right">$60.00</span></h4>
+					</div>
+				  </div>
+				</li>
+			  </ul>
+			  </div>
+			   <div class="item">
+			  <ul class="thumbnails">
+				<li class="span3">
+				  <div class="thumbnail">
+				  <i class="tag"></i>
+					<a><img src="themes/images/products/5.jpg" alt=""></a>
+					<div class="caption">
+					  <h5>Camera</h5>
+					  <h4><a class="btn" data-name="Camera" data-price="4000">BUY</a> <span class="pull-right">$4000.00</span></h4>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+				  <i class="tag"></i>
+					<a><img src="themes/images/products/6.jpg" alt=""></a>
+					<div class="caption">
+					  <h5>8GB memory card</h5>
+					  <h4><a class="btn" data-name="8GB memory card" data-price="40">BUY</a> <span class="pull-right">$40.00</span></h4>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="themes/images/products/7.jpg" alt=""></a>
+					<div class="caption">
+					  <h5>USB</h5>
+					   <h4><a class="btn" data-name="USB" data-price="40">BUY</a> <span class="pull-right">$40.00</span></h4>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="themes/images/products/8.jpg" alt=""></a>
+					<div class="caption">
+					  <h5>16GB memory card</h5>
+					   <h4><a class="btn" data-name="16GB memory card" data-price="70">BUY</a> <span class="pull-right">$70.00</span></h4>
+					</div>
+				  </div>
+				</li>
+			  </ul>
+			  </div>
+			  </div>
+			  <a class="left carousel-control" href="#featured" data-slide="prev">‹</a>
+			  <a class="right carousel-control" href="#featured" data-slide="next">›</a>
+			  </div>
+			  </div>
+		</div>
+		<h4>Latest Products </h4>
+			  <ul class="thumbnails">
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="themes/images/products/12.jpg" alt=""/></a>
+					<div class="caption">
+					  <h5>Airpod</h5>
+					  <p> 
+						Airpod
+					  </p>
+					  <h4 style="text-align:center">$2000.00<br/><a class="btn" data-name="Airpod" data-price="2000">Add to <i class="icon-shopping-cart"></i></a></h4>
+					</div>
+				  </div>
+				</li>
+				
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="themes/images/products/13.jpg" alt=""/></a>
+					<div class="caption">
+					  <h5>Headphone</h5>
+					  <p> 
+						Headphone 
+					  </p>
+					 <h4 style="text-align:center">$300.00<br/><a class="btn" data-name="Headphone" data-price="300">Add to <i class="icon-shopping-cart"></i></a></h4>
+					</div>
+				  </div>
+				</li>
+				
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="themes/images/products/14.jpg" alt=""/></a>
+					<div class="caption">
+					  <h5>ASUS RT-AC66U B1 AC1750</h5>
+					  <p> 
+						ASUS RT-AC66U B1 AC1750 Dual Band Gigabit WiFi Router 
+					  </p>
+					   <h4 style="text-align:center">$800.00<br/><a class="btn" data-name="ASUS RT-AC66U B1 AC1750" data-price="800">Add to <i class="icon-shopping-cart"></i></a></h4>
+					</div>
+				  </div>
+				</li>
+				
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="themes/images/products/9.jpg" alt=""/></a>
+					<div class="caption">
+					  <h5>Camera Set</h5>
+					  <p> 
+						A set of camera and memory card
+					  </p>
+					  <h4 style="text-align:center">$5000.00<br/><a class="btn" data-name="Camera Set" data-price="5000">Add to <i class="icon-shopping-cart"></i></a></h4>
+					</div>
+				  </div>
+				</li>
+				
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="themes/images/products/15.jpg" alt=""/></a>
+					<div class="caption">
+					  <h5>Logitech M650</h5>
+					  <p> 
+						Logitech Signature M650 Wireless Mouse - Graphite 
+					  </p>
+					  <h4 style="text-align:center">$300.00<br/><a class="btn" data-name="Logitech M650" data-price="300">Add to <i class="icon-shopping-cart"></i></a></h4>
+					</div>
+				  </div>
+				</li>
+				
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="themes/images/products/16.jpg" alt=""/></a>
+					<div class="caption">
+					  <h5>Corsair K70</h5>
+					  <p> 
+						Corsair K70 LUX Mechanical Gaming Keyboard — Red LED — Cherry
+					  </p>
+					   <h4 style="text-align:center">$1000.00<br/><a class="btn" data-name="Corsair K70" data-price="1000">Add to <i class="icon-shopping-cart"></i></a></h4>
+					</div>
+				  </div>
+				</li>
+				
+			  </ul>	
 
-  <link rel="stylesheet" href="css/font.css">
-  <link rel="stylesheet" href="css/main.css">
+		</div>
+		</div>
+	</div>
+</div>
+<!-- Footer ================================================================== -->
+	<div  id="footerSection">
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+				<h5>ACCOUNT</h5>
+				<a href="login.html">YOUR ACCOUNT</a>
+				<a href="login.html">PERSONAL INFORMATION</a> 
+				<a href="login.html">ADDRESSES</a> 
+				<a href="login.html">DISCOUNT</a>  
+				<a href="login.html">ORDER HISTORY</a>
+			 </div>
+			<div class="span3">
+				<h5>INFORMATION</h5>
+				<a href="contact.html">CONTACT</a>  
+				<a href="register.html">REGISTRATION</a>  
+				<a href="legal_notice.html">LEGAL NOTICE</a>  
+				<a href="tac.html">TERMS AND CONDITIONS</a> 
+				<a href="faq.html">FAQ</a>
+			 </div>
+			<div class="span3">
+				<h5>OUR OFFERS</h5>
+				<a href="#">NEW PRODUCTS</a> 
+				<a href="#">TOP SELLERS</a>  
+				<a href="special_offer.html">SPECIAL OFFERS</a>  
+				<a href="#">MANUFACTURERS</a> 
+				<a href="#">SUPPLIERS</a> 
+			 </div>
+			<div id="socialMedia" class="span3 pull-right">
+				<h5>SOCIAL MEDIA </h5>
+				<a href="#"><img width="60" height="60" src="themes/images/facebook.png" title="facebook" alt="facebook"/></a>
+				<a href="#"><img width="60" height="60" src="themes/images/twitter.png" title="twitter" alt="twitter"/></a>
+				<a href="#"><img width="60" height="60" src="themes/images/youtube.png" title="youtube" alt="youtube"/></a>
+			 </div> 
+		 </div>
+		<p class="pull-right">&copy; Smart Mobile</p>
+	</div><!-- Container End -->
+	</div>
+<!-- Placed at the end of the document so the pages load faster ============================================= -->
+	<script src="themes/js/jquery.js" type="text/javascript"></script>
+	<script src="themes/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="themes/js/google-code-prettify/prettify.js"></script>
+	
+	<script src="themes/js/bootshop.js"></script>
+    <script src="themes/js/jquery.lightbox-0.5.js"></script>
+	<script src="js/main.js"></script>
 
-  <script src="js/vendor/modernizr.js"></script>
-</head>
-<body class="page-home">
-
-  <header class="site-header">
-    <h1 class="title">FYP Project</h1>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="unicorns.html">Meet the Unicorns</a></li>
-        <li><a href="investors.html">Investors &amp; Board of Directors</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="apply.html">Apply</a></li>
-      </ul>
-    </nav>
-    <button type="button" class="btn-menu"><span>Menu</span></button>
-    <a class="home-button" href="/register.html">Giddy Up!</a>
-  </header>
-
-  <section class="home-about">
-    <div class="row column large-9 xlarge-6 xxlarge-4">
-      <h2 class="section-title">How Does This Work?</h2>
-      <p class="content">
-        In today’s fast paced world, you’ve got places you need to be but not enough time in your jam packed schedule. Wouldn’t it be nice if there were a transportation service that changed the way you get around daily? Introducing Wild Rydes, an innovative transportation service that helps people get to their destination faster and hassle-free. Getting started is as easy as tapping a button in our app.
-      </p>
-    </div>
-
-    <div class="row medium-up-2 large-up-4">
-      <div class="column">
-        <div class="home-about-block">
-          <h3 class="title icon-download">Download The App</h3>
-          <p class="content">Head over to the app store and download the Wild Rydes app. You’re just a few taps away from getting your ryde.</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="home-about-block">
-          <h3 class="title icon-unicorn">Request A Unicorn</h3>
-          <p class="content">We can get you there. Simply request a ryde on the app and we'll connect you with a unicorn immediately.</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="home-about-block">
-          <h3 class="title icon-price">Pick A Price</h3>
-          <p class="content">Pick the valuation you're willing to pay and your ryde is set up. The only surge is the acceleration you get when taking off.</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="home-about-block">
-          <h3 class="title icon-success">Ride Off To Success!</h3>
-          <p class="content">After matching with your unicorn and agreeing to its terms, you’ll be all set. Your unicorn will arrive shortly to pick you up.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-story">
-    <div class="row column large-9 xlarge-6 xxlarge-4">
-      <h2 class="section-title">Our Story</h2>
-      <p class="content">
-        Wild Rydes was started by a former hedge fund analyst and a software developer. The two long-time friends happened upon the Wild Rydes idea after attending a silent yoga retreat in Nevada. After gazing upon the majestic herds of unicorns prancing across a surreal Nevada sunset, they witnessed firsthand the poverty and unemployment endemic to that once proud race. Whether it was modern society’s reliance on science over magic or not, we’ll never know the cause of their Ozymandian downfall and fade to obscurity. Moved by empathy, romance, and free enterprise, they saw an opportunity to marry society’s demand for faster, more flexible transportation to underutilized beasts of labor through an on-demand market making transportation app. Using the founders’ respective expertise in animal husbandry and software engineering, Wild Rydes was formed and has since raised untold amounts of venture capital. Today, Wild Rydes has thousands of unicorns in its network fulfilling hundreds of rydes each day.
-      </p>
-    </div>
-  </section>
-
-  <section class="home-sign-up">
-    <div class="row column">
-      <img class="icon-w" src="images/wr-home-W.png">
-
-      <form onsubmit="javascript:void(0);">
-        <input type="email" placeholder="Enter your email address">
-        <button type="button">Submit</button>
-      </form>
-
-      <h2 class="section-title">Sign Up</h2>
-
-      <p class="content">Wild Rydes is coming soon! Enter your email to enter the limited private beta</p>
-
-      <div class="apps">
-        <a class="app-icon" href=""><img src="images/wr-home-apple.png"></a>
-        <a class="app-icon" href=""><img src="images/wr-home-google.png"></a>
-        <a class="app-icon" href=""><img src="images/wr-home-blackberry.png"></a>
-        <a class="app-icon" href=""><img src="images/wr-home-Xiaomi.png"></a>
-      </div>
-
-      <div class="social">
-        <a class="icon-fb" href="">Facebook</a>
-        <a class="icon-tw" href="">Twitter</a>
-        <a class="icon-ig" href="">Instagram</a>
-        <a class="icon-wc" href="">Wechat</a>
-        <a class="icon-wb" href="">Weibo</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-quote">
-    <div class="row column medium-8 xxlarge-6">
-      <div class="quote-wrap">
-        <div class="quote">
-          “I was almost late to my ultimate frisbee tournament in DOLORES park. BUt Wild Rydes Got me there from the marina in under five minutes.”
-        </div>
-        <div class="quoter">- Satisfied Wild Rydes User</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="kraken-callout">
-    <div class="row">
-      <div class="columns medium-6 xxlarge-4 xxlarge-offset-2">
-        <img src="images/wr-home-kraken.png">
-      </div>
-
-      <div class="columns medium-6 xlarge-5 xxlarge-4">
-        <h4 class="title">Coming Soon</h4>
-        <p class="content">
-          Kraken 3xplorer and Dragon Flyght. We’re looking to provide you a full service package from air, land, and to sea.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="row column">
-      <nav class="footer-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="unicorns.html">Meet the Unicorns</a></li>
-          <li><a href="investors.html">Investors & Board of Directors</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="apply.html">Apply</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="row column">
-      <div class="footer-legal">
-        &copy;WildRydes Inc<br>
-        All Rights Reserved
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/vendor.js"></script>
-
-  <script src="js/main.js"></script>
+<span id="themesBtn"></span>
 </body>
 </html>
